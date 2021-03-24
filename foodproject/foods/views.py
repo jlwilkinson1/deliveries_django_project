@@ -41,6 +41,7 @@ class RestaurantDetailView(DetailView):
         context["dining_name"] = restaurant
         context["dining_offers"] = offers
         context["number_of_offers"] = offers.count()
+        print(context)
         return context
        # queryset = Offer.objects.filter(rest_name = )
        # context ["rest_name"] = queryset

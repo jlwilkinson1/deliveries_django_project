@@ -722,14 +722,6 @@ a#scrollUp:hover {
   background: #ededed;
 }
 
-
-.bg-image--2 {
-  background-image: url(images/bg/2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
 .bg-image--3 {
   background-image: url(images/bg/3.jpg);
   background-repeat: no-repeat;
@@ -830,13 +822,6 @@ a#scrollUp:hover {
 
 .bg-image--17 {
   background-image: url(images/bg/17.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.bg-image--18 {
-  background-image: url(images/bg/18.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

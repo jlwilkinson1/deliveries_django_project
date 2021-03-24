@@ -23,6 +23,14 @@
 
     <!-- Modernizer js -->
     <script src='{% static "foods/js/vendor/modernizr-3.5.0.min.js" %}'></script>
+    <style>
+        .bg-image--18 {
+            background-image: url("{{dining_name.rest_image}}");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+    </style>
 </head>
 
 <body>
@@ -165,7 +173,7 @@
                         </div>
                         <div class="cpy__right--right">
                             <a href="#">
-                                <img src="images/icon/shape/2.png" alt="payment images">
+                                <img src="">
                             </a>
                         </div>
                     </div>
