@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'e-@9tpu)19zh-ij74uv*rr39u0c4cs5y3sumgoc0#4%exwq$c%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -119,3 +119,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+if DEBUG is True:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = '/static/'
+    STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+    ]
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+else:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = '/static/'          
+    STATIC_ROOT = '/var/www/deliveries_django_project/foodproject/static'
+    # STATICFILES_DIRS = [
+    #     os.path.join(BASE_DIR, '/var/www/')
+    # ]
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, '/var/www/deliveries_django_project/foodproject/media')
