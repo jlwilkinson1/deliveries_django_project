@@ -1,115 +1,258 @@
 {% load static %}
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
-    <!-- Site made with Mobirise Website Builder v5.3.0, https://mobirise.com -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="Mobirise v5.3.0, mobirise.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href='{% static "foods/assets/images/logo.png" %}' type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Deals for {{dining_name.rest_name}}</title>
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Favicons -->
+    <link rel="shortcut icon" href='{% static "foods/images/favicon.ico" %}'>
+    <link rel="apple-touch-icon" href='{% static "foods/images/icon.png" %}'>
 
-    <title>rest_home</title>
-    <link rel="stylesheet" href='{% static "foods/assets/web/assets/mobirise-icons/mobirise-icons.css" %}'>
-    <link rel="stylesheet" href='{% static "foods/assets/tether/tether.min.css" %}'>
-    <link rel="stylesheet" href='{% static "foods/assets/bootstrap/css/bootstrap.min.css" %}'>
-    <link rel="stylesheet" href='{% static "foods/assets/bootstrap/css/bootstrap-grid.min.css" %}'>
-    <link rel="stylesheet" href='{% static "foods/assets/bootstrap/css/bootstrap-reboot.min.css" %}'>
-    <link rel="stylesheet" href='{% static "foods/assets/dropdown/css/style.css" %}'>
-    <link rel="stylesheet" href='{% static "foods/assets/socicon/css/styles.css" %}'>
-    <link rel="stylesheet" href='{% static "foods/assets/theme/css/style.css" %}'>
-    <link rel="preload" as="style" href='{% static "foods/assets/mobirise/css/mbr-additional.css" %}'>
-    <link rel="stylesheet" href='{% static "foods/assets/mobirise/css/mbr-additional.css" %}' type="text/css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href='{% static "foods/css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "foods/css/plugins.css" %}'>
+    <link rel="stylesheet" href='{% static "foods/style.css" %}'>
+
+    <!-- Cusom css -->
+    <link rel="stylesheet" href='{% static "foods/css/custom.css" %}'>
+
+    <!-- Modernizer js -->
+    <script src='{% static "foods/js/vendor/modernizr-3.5.0.min.js" %}'></script>
 </head>
-<section class="menu cid-rzB7jyCAAp" once="menu" id="menu2-j">
 
+<body>
+    <!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
 
+    <!-- Add your site or application content here -->
 
+    <!-- <div class="fakeloader"></div> -->
 
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="navbar-brand">
+    <!-- Main wrapper -->
+    <div class="wrapper" id="wrapper">
+        <!-- Start Header Area -->
+        <!-- Start Mainmenu Area -->
+        <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-sm-4 col-md-6 order-1 order-lg-1">
+                        <div class="logo">
+                            <a href="{% url 'offer_list' %}">
+                                <img src='{% static "foods/images/logo/foody.png" alt="logo images" %}'>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-sm-4 col-md-2 order-3 order-lg-2">
+                        <div class="main__menu__wrap">
+                            <nav class="main__menu__nav d-none d-lg-block">
+                                <ul class="mainmenu">
+                                    <li class="drop"><a href="index.html">Home</a>
+                                    </li>
+                                    <li><a href="about-us.html">About</a></li>
+                                    <li class="drop"><a href="menu-grid.html">Cuisines</a>
+                                        <ul class="dropdown__menu">
+                                            <li><a href="menu-grid.html">Menu Grid</a></li>
+                                            <li><a href="menu-list.html">Menu List</a></li>
+                                            <li><a href="menu-details.html">Menu Details</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
 
-            <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-2"
-                    href="https://mobiri.se">Delivery Deals&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    &nbsp;</a></span>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="mobile-menu d-block d-lg-none"></div>
+                <!-- Mobile Menu -->
             </div>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="{% url 'offer_list' %}">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobiri.se">
-                        Cuisines</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobiri.se">
-                        About Us
-                    </a>
-                </li>
-            </ul>
-
-            <div class="navbar-buttons mbr-section-btn">
-                <a class="btn btn-sm btn-secondary display-4" href="https://mobiri.se">
-                    Contact Us
-                </a>
+        </div>
+        <!-- End Mainmenu Area -->
+        </header>
+        <!-- End Header Area -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--18">
+            <div class="ht__bradcaump__wrap d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">Blog Details</h2>
+                                <nav class="bradcaump-inner">
+                                    <a class="breadcrumb-item" href="index.html">Home</a>
+                                    <span class="brd-separetor"><i class="zmdi zmdi-long-arrow-right"></i></span>
+                                    <span class="breadcrumb-item active">Blog Details</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-</section>
+        <!-- End Bradcaump area -->
+        <!-- Start Blog List View Area -->
+        <section class="blog__details__wrapper section-padding--lg blog-details-page bg--white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+                        <div class="blog__details__container">
 
+                            <!-- Start Blog Details -->
+                            <div class="bl__details__inner">
+                                <div class="bl__details__content">
+                                    <span>Cuisine: Pasta</span>
+                                    <h2>{{dining_name.rest_name}}</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labor dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ualiqui comi modo consequat. Duis aute irure
+                                        dolor in reprehenderit in voluptate velit esse cillumfugiat nu
+                                        pariatur.Excepteur sint occaecat cupidatat non proident,</p>
+                                    <div class="rel__blog__list d-flex align-items-start justify-content-between">
 
-<h1>Test</h1>
+                                    </div>
 
-<p>{{dining_name.rest_name}}</p>
+                                    <div class="bl__share d-flex">
+                                        <span>Share by:</span>
+                                        <ul class="blog__social__net d-flex">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-<p>This Restaurant currently has {{number_of_offers}} offer(s).</p>
+                                <!-- End Comment Form -->
+                            </div>
+                            <!-- End Blog Details -->
+                        </div>
+                    </div>
+                    <!-- Start Category Area -->
+                    <div class="food__category__area mt--60">
+                        <h4 class="side__title" style="margin-bottom: 5px;">Offers</h4>
+                        <p>This Restaurant currently has {{number_of_offers}} offer(s).</p>
+                        <ul class="food__category" style="padding-top: 5px;">
+                            {% for i in dining_offers %}
+                            <li>{{i.rest_offer}} by {{i.source}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- End Category Area -->
 
-{% for i in dining_offers %}
-{{i.rest_offer}} by {{i.source}}
-{% endfor %}
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+    <!-- End Blog List View Area -->
+    <!-- End Single Footer -->
+    </div>
+    </div>
+    </div>
+    <div class="copyright bg--theme">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="copyright__inner">
+                        <div class="cpy__right--left">
+                            <p>@All Right Reserved.<a href="https://devitems.com">Devitems</a></p>
+                        </div>
+                        <div class="cpy__right--right">
+                            <a href="#">
+                                <img src="images/icon/shape/2.png" alt="payment images">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <!-- End Footer Area -->
+    <!-- Cartbox -->
+    <div class="cartbox-wrap">
+        <div class="cartbox text-right">
+            <button class="cartbox-close"><i class="zmdi zmdi-close"></i></button>
+            <div class="cartbox__inner text-left">
+                <div class="cartbox__items">
+                    <!-- Cartbox Single Item -->
+                    <div class="cartbox__item">
+                        <div class="cartbox__item__thumb">
+                            <a href="product-details.html">
+                                <img src="images/blog/sm-img/1.jpg" alt="small thumbnail">
+                            </a>
+                        </div>
+                        <div class="cartbox__item__content">
+                            <h5><a href="product-details.html" class="product-name">Vanila Muffin</a></h5>
+                            <p>Qty: <span>01</span></p>
+                            <span class="price">$15</span>
+                        </div>
+                        <button class="cartbox__item__remove">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </div><!-- //Cartbox Single Item -->
+                    <!-- Cartbox Single Item -->
+                    <div class="cartbox__item">
+                        <div class="cartbox__item__thumb">
+                            <a href="product-details.html">
+                                <img src="images/blog/sm-img/2.jpg" alt="small thumbnail">
+                            </a>
+                        </div>
+                        <div class="cartbox__item__content">
+                            <h5><a href="product-details.html" class="product-name">Wheat Bread</a></h5>
+                            <p>Qty: <span>01</span></p>
+                            <span class="price">$25</span>
+                        </div>
+                        <button class="cartbox__item__remove">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </div><!-- //Cartbox Single Item -->
+                    <!-- Cartbox Single Item -->
+                    <div class="cartbox__item">
+                        <div class="cartbox__item__thumb">
+                            <a href="product-details.html">
+                                <img src="images/blog/sm-img/3.jpg" alt="small thumbnail">
+                            </a>
+                        </div>
+                        <div class="cartbox__item__content">
+                            <h5><a href="product-details.html" class="product-name">Mixed Fruits Pie</a></h5>
+                            <p>Qty: <span>01</span></p>
+                            <span class="price">$30</span>
+                        </div>
+                        <button class="cartbox__item__remove">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </div><!-- //Cartbox Single Item -->
+                </div>
+                <div class="cartbox__total">
+                    <ul>
+                        <li><span class="cartbox__total__title">Subtotal</span><span class="price">$70</span></li>
+                        <li class="shipping-charge"><span class="cartbox__total__title">Shipping Charge</span><span
+                                class="price">$05</span></li>
+                        <li class="grandtotal">Total<span class="price">$75</span></li>
+                    </ul>
+                </div>
+                <div class="cartbox__buttons">
+                    <a class="food__btn" href="cart.html"><span>View cart</span></a>
+                    <a class="food__btn" href="checkout.html"><span>Checkout</span></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- //Cartbox -->
+    </div><!-- //Main wrapper -->
 
-<h1></h1>
-
-<section
-    style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
-    <a href="https://mobirise.site/g" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
-    <p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Develop a site - <a href="https://mobirise.site/v"
-            style="color:#aaa;">Find more</a></p>
-</section>
-
-</section>
-<script src='{% static "foods/assets/web/assets/jquery/jquery.min.js" %}'></script>
-<script src='{% static "foods/assets/popper/popper.min.js" %}'></script>
-<script src='{% static "foods/assets/tether/tether.min.js" %}'></script>
-<script src='{% static "foods/assets/bootstrap/js/bootstrap.min.js" %}'></script>
-<script src='{% static "foods/assets/smoothscroll/smooth-scroll.js" %}'></script>
-<script src='{% static "foods/assets/dropdown/js/nav-dropdown.js" %}'></script>
-<script src='{% static "foods/assets/dropdown/js/navbar-dropdown.js" %}'></script>
-<script src='{% static "foods/assets/touchswipe/jquery.touch-swipe.min.js" %}'></script>
-<script src='{% static "foods/assets/parallax/jarallax.min.js" %}'></script>
-<script src='{% static "foods/assets/viewportchecker/jquery.viewportchecker.js" %}'></script>
-<script src='{% static "foods/assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js" %}'></script>
-<script src='{% static "foods/assets/mbr-clients-slider/mbr-clients-slider.js" %}'></script>
-<script src='{% static "foods/assets/theme/js/script.js" %}'></script>
-<script src='{% static "foods/assets/formoid/formoid.min.js" %}'></script>
-
-
+    <!-- JS Files -->
+    <script src='{% static "js/vendor/jquery-3.2.1.min.js" %}'></script>
+    <script src='{% static "js/popper.min.js" %}'></script>
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+    <script src='{% static "js/plugins.js" %}'></script>
+    <script src='{% static "js/active.js" %}'></script>
 </body>
 
 </html>

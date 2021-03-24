@@ -24,7 +24,7 @@ class Offer(models.Model):
 
 class Restarantinfo(models.Model):
     rest_name = models.CharField(max_length = 200, default = '') 
-    rest_image = models.ImageField(blank = True) 
+    rest_image = models.ImageField(blank = True, default = 'foods/placehold_stock.jpg') 
     is_closed = models.BooleanField(default = False) 
     deliveries = models.BooleanField(default = True)
     pickup = models.BooleanField(default = True)
@@ -34,7 +34,7 @@ class Restarantinfo(models.Model):
     address = models.CharField(max_length = 200)
     city = models.CharField(max_length = 200) 
     zip_code = models.PositiveSmallIntegerField()  
-    offer = models.ForeignKey(Offer, related_name = "restaurants", on_delete=models.CASCADE)
+    offer = models.ForeignKey(Offer, on_delete=models.CASCADE)
 
     def __str__(self):
         return "{} {} {}".format(self.rest_name, self.cuisines, self.city)

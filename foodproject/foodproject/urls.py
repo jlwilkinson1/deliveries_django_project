@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from foods.views import OfferListView, RestaurantDetailView, DeliveryListView
+from foods.views import OfferListView, RestaurantDetailView, DeliveryListView, DeliveryListViewGH
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', OfferListView.as_view(), name = "offer_list"),
     path('restdetail/<int:pk>/', RestaurantDetailView.as_view(), name = "rest_detail"),
     path('doordash/', DeliveryListView.as_view(), name = "doordash_list"),
+    path('grubhub/', DeliveryListView.as_view(), name = "grubhub_list"),
 
 
     path('test/', OfferListView.as_view(), name = "unused_offer_list")

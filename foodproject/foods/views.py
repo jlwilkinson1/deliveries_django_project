@@ -20,6 +20,15 @@ class DeliveryListView(ListView):
         context ["source"] = queryset
         return context
 
+class DeliveryListViewGH(ListView):
+    model = Offer
+    template_name = "foods/grubhub_list.html"
+    def get_context_data(self, *args, **kwargs):
+        context = super(DeliveryListViewGH, self).get_context_data(*args, **kwargs)
+        queryset = Offer.objects.filter(source = "Grubhub")
+        context ["source"] = queryset
+        return context
+
 class RestaurantDetailView(DetailView):
     model = Restarantinfo
     template_name = "foods/rest_detail.html"

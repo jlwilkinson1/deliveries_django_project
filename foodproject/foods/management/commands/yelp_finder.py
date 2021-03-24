@@ -25,9 +25,9 @@ def api_fetcher(restaurant):
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        offers = Offer.objects.all()
+        offers = Offer.objects.filter(source = "Grubhub")
         print(offers)
-        offers = [(i.rest_name, i) for i in offers   #rest name from Offers, named same in restaurantinfo
+        offers = [(i.rest_name, i) for i in offers]   #rest name from Offers, named same in restaurantinfo
         print(offers)
         for restaurant, obj in offers:
             try:    
