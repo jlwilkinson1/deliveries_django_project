@@ -4,7 +4,9 @@ from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import UpdateView
 from django.views.generic.edit import DeleteView
+from rest_framework.generics import ListAPIView
 from .models import Offer, Restarantinfo
+from .serializers import RestarantinfoSerializer
 # Create your views here.
 
 
@@ -43,6 +45,21 @@ class RestaurantDetailView(DetailView):
         context["number_of_offers"] = offers.count()
         print(context)
         return context
+
+class RestarantinfoAPIView(ListAPIView):
+    model = Restarantinfo
+    serializer_class = RestarantinfoSerializer
+    def get_queryset(self):
+        value = self.request.query_params.get("value")
+        if value.isnumeric():
+            queryset = Restarantinfo.objects.filter(zip_code=int(value))
+        elif value.isalpha():
+            queryset = Restarantinfo.objects.filter(address__icontains=value)
+        else:
+            if len(queryset) == 0:
+                print("No Restaurants found. Try to enter a zipcode.")
+        return queryset
+    
        # queryset = Offer.objects.filter(rest_name = )
        # context ["rest_name"] = queryset
        # return context
